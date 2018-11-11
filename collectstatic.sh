@@ -10,8 +10,8 @@ gulp build;
 # BACKEND
 cd ../..;
 source ./venv/bin/activate;
-cd ./hg_shop_public/backend/;
-python3.5 manage.py collectstatic --settings=config.settings.production --noinput;
+cd ./project/backend/;
+python manage.py collectstatic --settings=config.settings.production --noinput;
 deactivate;
 cd ..
 
