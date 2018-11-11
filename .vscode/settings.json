@@ -1,0 +1,17 @@
+{
+    "files.exclude": {
+        "**/*.git": false,
+        "**/*.pyc": true,
+        "**/package-lock.json": true,
+        "**/node_modules": true,
+        "**/*__pycache__": true,
+        "**/.vscode": true,
+        "**/*.xlsx": true,
+        "**/*.xlsx#": true,
+        "**/*.sql": true,
+        "**/*db.sqlite3": true,
+        "venv": true,
+        "**/*.ipynb_checkpoints": true,
+        "**/*.ipynb": true,
+    },    
+}

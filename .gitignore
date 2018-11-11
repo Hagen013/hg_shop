@@ -32,7 +32,6 @@ staticfiles/
 *.ipynb
 
 # JSON raw data
-*.json
 
 # Excel
 *.xls
