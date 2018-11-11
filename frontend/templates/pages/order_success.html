@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load staticfiles i18n %}
+
+{% block css %}
+	{{ block.super }}
+{% endblock %}
+
+{% block content %}
+	<div class="content-wrapper-generic">
+    <div class="page-title success">
+      Ваш заказ успешно принят
+    </div>
+    <div class="text-content">
+      <div class="order-success__text">
+        Спасибо за Ваш выбор! На ваш почтовый адрес было отправлено письмо с уведомлением.<br>
+        В течение рабочих суток с Вами свяжется сотрудник для уточнения деталей заказа<br><br>
+        Если по каким-то причинам этого не произошло, просим обратиться по телефону:<br> <span>+7 495 642 35 07</span>
+      </div>
+    </div>
+	</div>
+{% endblock content %}
+
+{% block javascript %}
+  {{ block.super }}
+  <script src="{% static 'js/infoPage.js'%}"></script>
+{% endblock %}

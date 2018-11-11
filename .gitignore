@@ -1,0 +1,40 @@
+# Basics
+.git
+*.py[cod]
+__pycache__
+
+# Logs
+logs
+*.log
+pip-log.txt
+npm-debug.log*
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+htmlcov
+
+# npm
+node_modules/
+
+# virtual environments
+.env
+env/
+
+# User-uploaded media
+backend/media/
+staticfiles/
+
+
+# Jupyter notebook
+.*ipynb_checkpoints/
+*.ipynb
+
+# JSON raw data
+*.json
+
+# Excel
+*.xls
+*.xlsx
+*.~lock.

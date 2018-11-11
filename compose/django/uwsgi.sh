@@ -1,0 +1,1 @@
+uwsgi --plugin python3 --ini /hg_shop_uwsgi.ini

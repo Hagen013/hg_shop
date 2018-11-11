@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Ionicons";
+    src: url("/static/fonts/ionicons/ionicons.eot");
+    src: url("/static/fonts/ionicons/ionicons.eot?#iefix") format("embedded-opentype"),
+         url("/static/fonts/ionicons/ionicons.woff2") format("woff2"),
+         url("/static/fonts/ionicons/ionicons.woff") format("woff"),
+         url("/static/fonts/ionicons/ionicons.ttf") format("ttf"),
+         url("/static/fonts/ionicons/ionicons.svg#Ionicons") format("svg");
+    font-style: normal;
+    font-weight: normal;
+}

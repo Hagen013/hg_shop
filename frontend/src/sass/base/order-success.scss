@@ -1,0 +1,23 @@
+@import "variables/colors";
+@import "ionic/ionicons-variables";
+
+
+.text-content {
+	padding: 40px 20px 60px 20px;
+	background: $white;
+}
+
+.order-id {
+	font-size: 20px;
+	font-family: MuseoSansBlack;
+	font-weight: 900;
+}
+
+.text-content {
+	font-family: MuseoSansBlack;
+	font-weight: 900;
+	font-size: 15px;
+	span {
+		font-size: 16px;
+	}
+}

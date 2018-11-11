@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load staticfiles i18n %}
+
+{% block css %}
+	{{ block.super }}
+{% endblock %}
+
+{% block content %}
+	<div class="content-wrapper-generic">
+
+    <div class="page-title">
+      УСЛОВИЯ ОПТОВОЙ ПРОДАЖИ
+    </div>
+
+    <div class="text-content">
+      <div class="discount-name">
+        Для оптовых покупателей и торгующих организаций мы предлагаем выгодные условия сотрудничества.
+      </div>
+      <div class="discount-content">
+        Дисконтная система поощрений сочетающая прозрачные правила и гибкий индивидуальный подход
+      </div>
+      <ol class="discount-options">Скидки от 3% до 30%  начиная от суммы заказа 10 000 руб :
+        <li class="discount-options__unit">
+          <span class="round-label">3-6</span><span class="percent">%</span>  от суммы 10 000 руб
+        </li>
+        <li class="discount-options__unit">
+          <span class="round-label">6-12</span><span class="percent">%</span> от суммы 50 000 руб
+        </li>
+        <li class="discount-options__unit">
+          <span class="round-label">9-18</span><span class="percent">%</span> и более от суммы 100 000 руб
+        </li>
+      </ol>
+      <ol class="discount-info">
+        <li class="option"><div class="round-label-small">+</div>Незамедлительная отгрузка продукции со склада в Москве во все регионы РФ</li>
+        <li class="option"><div class="round-label-small">+</div>Наличие более 2000 наименований светодиодной техники в оптовых количествах</li>
+        <li class="option"><div class="round-label-small">+</div>Пополнение ассортимента регулярными поставками напрямую от производителей</li>
+        <li class="option"><div class="round-label-small">+</div>Поставка больших объёмов продукции по предварительному заказу в приемлемые и прогнозируемые сроки</li>
+        <li class="option"><div class="round-label-small">+</div>Обеспечение документальной и технической поддержкой</li>
+        <li class="option"><div class="round-label-small">+</div>Надлежащее исполнение гарантийных обязательств</li>
+      </ol>
+    </div>
+
+  </div>
+
+{% endblock content %}
+
+{% block javascript %}
+  {{ block.super }}
+  <script src="{% static 'js/infoPage.js'%}"></script>
+{% endblock %}

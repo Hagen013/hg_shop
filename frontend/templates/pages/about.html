@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load staticfiles i18n %}
+
+{% block css %}
+	{{ block.super }}
+{% endblock %}
+
+{% block content %}
+	<div class="content-wrapper-generic">
+    <div class="page-title">
+      О НАС <a class="page-title__link" href="{% url 'core:info' %}">Как купить?</a>
+    </div>
+    <div class="text-content">
+      <span class="site-name">ТОРГО<span class="mint">СВЕТ</span></span> - молодая и развивающаяся Компания.
+      <div class="gallery-title">
+        Основным направлением нашей деятельности является поставка Трековых Систем Освещения для:
+      </div>
+      <div class="grad-gallery">
+        <div class="grad-gallery__item">
+        <p>Торговых<br>Площадей</p>
+          <div class="gradient"></div>
+          <img class='grad-gallery__image' src="{%static 'images/about_1.jpg' %}">
+        </div>
+        <div class="grad-gallery__item">
+        <p>Выставочных<br>Залов</p>
+          <div class="gradient"></div>
+          <img class='grad-gallery__image' src="{%static 'images/about_2.jpg' %}">
+        </div>
+        <div class="grad-gallery__item">
+        <p>Складских<br>Помещений</p>
+          <div class="gradient"></div>
+          <img class='grad-gallery__image' src="{%static 'images/about_3.jpg' %}">
+        </div>
+        <div class="grad-gallery__item">
+        <p>Рабочих и Офисных<br>Зон</p>
+          <div class="gradient"></div>
+          <img class='grad-gallery__image' src="{%static 'images/about_4.jpg' %}">
+        </div>
+      </div>
+      <div class="text-element">
+Всегда в наличии Светильники Трековые Светодиодные основных цветовых температур<br>мощностью от 3W до 50W
+со световыми потоками от 270 Lm до 6000 Lm.
+      </div>
+      <div class="gallery-title">
+      Помимо категории <span>TRACK LIGHT</span> на нашем складе всегда присутствует<br> широкий ассортимент
+      другой светодиодной техники более 2000 наименований:
+      </div>
+      <ul class="text-list">
+        <li>Светодиодная Лента</li>
+        <li>Светодиоды, Матрицы, Модули, Панели</li>
+        <li>Светодиодные Светильники и Прожекторы</li>
+        <li>Фасадное и Ландшафтное освещение</li>
+        <li>Источники Питания и Элементы Управления Светом</li>
+        <li>Алюминиевый Профиль для Светодиодной Ленты</li>
+        <li>Аксессуары для Светодиодной Техники</li>
+      </ul>
+
+      <div class="gallery-title">
+    Все товары из обозначенного ассортимента Вы можете приобрести через наш интернет-магазин<br>либо в телефонном режиме и получить любым из выбранных способов:
+      </div>
+
+      <ul class="text-list">
+        <li>В пункте самовывоза</li>
+        <li>С доставкой курьерской службой мо г.Москва и область</li>
+        <li>С доставкой во все Регионы РФ транспортными компаниями, курьерскими и почтовыми службами</li>
+      </ul>
+
+      <div class="gallery-title">
+      Наши преимущества:
+    </div>
+    <ul class="text-list">
+      <li>Незамедлительная отгрузка продукции со склада в Москве во все регионы РФ</li>
+      <li>Наличие более 2000 наименований светодиодной техники в оптовых количествах</li>
+      <li>Пополнение ассортимента регулярными поставками напрямую от производителей</li>
+      <li>Поставка больших объёмов продукции по предварительному заказу в приемлемые и прогнозируемые сроки</li>
+      <li>Обеспечение документальной и технической поддержкой</li>
+      <li>Исполнение гарантийных обязательств</li>
+    </ul>
+      <h2>ДЛЯ ЮРИДИЧЕСКИХ ЛИЦ И ИНДИВИДУАЛЬНЫХ ПРЕДПРИНИМАТЕЛЕЙ:</h2>
+      <div class="billing-info">
+        <a href="{% static 'REQUISITES.docx' %}">РЕКВИЗИТЫ</a><br>
+      </div>
+
+
+    </div>
+	</div>
+{% endblock content %}
+
+{% block javascript %}
+  {{ block.super }}
+  <script src="{% static 'js/infoPage.js'%}"></script>
+{% endblock %}

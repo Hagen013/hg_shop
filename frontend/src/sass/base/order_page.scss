@@ -1,0 +1,146 @@
+@import "variables/colors";
+@import "ionic/ionicons-variables";
+
+
+.order-title {
+	padding: 25px 20px 20px;
+	font-weight: 900;
+	margin-bottom: 20px;
+    border-bottom: 1px solid $border-thin;
+    font-size: 30px;
+    font-family: MuseoSansBlack;
+    background: $white;
+    width: 100%;
+}
+
+.order {
+	padding: 16px;
+	background: $white;
+}
+
+.order__header {
+	font-family: MuseoSansBlack;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.order__total {
+	font-family: MuseoSansBlack;
+	font-size: 18px;
+	opacity: 0;
+	will-change: opacity;
+}
+
+.order__total_ready {
+	opacity: 1;
+}
+
+.order__controls {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 720px;
+}
+
+.order__info {
+	font-size: 13px;
+	margin: 16px 0px 32px 0px;
+	p {
+		margin-top: 16px;
+	}
+}
+
+.field {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.field_textarea {
+	align-items: flex-start !important;
+	.field__title {
+		padding: 4px 0px 0px 4px;
+	}
+}
+
+.field__title {
+	width: 170px;
+	font-size: 13px;
+}
+
+.field__input-box {
+	height: 34px;
+	width: 550px;
+}
+
+.field__input {
+	height: 100%;
+	width: 100%;
+	padding: 0px 16px 0px 16px;
+	box-shadow: none;
+	transition-property: background;
+	transition-duration: .2s;
+	border: 1px solid rgb(196, 212, 222);
+	&:focus {
+		border: 1px solid $mint;
+		outline: none;
+		background: white !important;
+	}
+}
+
+.field__input_invalid {
+	border: 1px solid rgb(196, 212, 222);
+	background: rgba(255,0,0,0.05)
+}
+
+.field__input_valid {
+	border: 1px solid rgb(196, 212, 222);
+	background: rgba(0,239,129,0.05);
+}
+
+.textarea {
+	min-height: 68px;
+	max-height: 300px;
+	width: 550px;
+	max-width: 550px;
+	padding: 8px 16px 0px 16px;
+	border: 1px solid rgb(196, 212, 222);
+	&:focus {
+		border: 1px solid $mint;
+		outline: none;
+	}
+}
+
+.red {
+	color: red;
+}
+
+.button {
+	height: 40px;
+	outline: none;
+	padding: 0px 8px;
+	font-family: MuseoSansBlack;
+	border: none;
+	transition-property: background;
+	transition-duration: .2s;
+	&:focus {
+		outline: none;
+	}
+}
+
+.button_disabled {
+	background: white !important;
+	border: 3px solid $dark !important;
+}
+
+.button_green {
+	color: $dark;
+	background: $mint;
+	&:hover {
+		background: darken($mint, 5);
+	}
+}
+

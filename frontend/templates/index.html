@@ -1,0 +1,239 @@
+{% extends 'base.html' %}
+{% load staticfiles i18n %}
+
+{% block meta %}
+<meta name="description" content="Оптовые и розничные продажи светодиодного освещения.">
+<meta name="keywords" content="Светодиодные ленты, трековые светильники светодиодные, блоки питания для лент, алюминиевый профиль, профиль для лент, светодиодные светильники, светодиодные прожекторы">
+{% endblock meta %}
+
+{% block css %}
+	{{ block.super }}
+	<link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block site-slider %}
+  <style>
+  #site-slider_wrapper {
+    padding-top: 16px;
+    width: 100%;
+    height: 488px;
+    background-color: #5a8c80;
+    /* IE9, iOS 3.2+ */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiM5NmZlYzkiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzFkMTkzNiIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%,color-stop(0, rgb(150, 254, 201)),color-stop(1, rgb(29, 25, 54)));
+    /* Android 2.3 */
+    background-image: -webkit-repeating-linear-gradient(top left,rgb(150, 254, 201) 0%,rgb(29, 25, 54) 100%);
+    /* IE10+ */
+    background-image: repeating-linear-gradient(to bottom right,rgb(150, 254, 201) 0%,rgb(29, 25, 54) 100%);
+    background-image: -ms-repeating-linear-gradient(top left,rgb(150, 254, 201) 0%,rgb(29, 25, 54) 100%);
+  }
+  </style>
+	<div id="site-slider_wrapper">
+		<div class="slider-container">
+
+			<div id="site-slider" class="owl-carousel owl-theme">
+				<div class="item" id="slide_2">
+					<h2>ОСНОВНЫЕ<br>ГРУППЫ<br>ТОВАРОВ</h2>
+					<div class="metro-menu">
+						<div class="metro-menu__row">
+							<a href="{% url 'core:category_page' category_url='svetodiodnye_svetilniki/trekovye' %}" class="metro-menu__item" id="metro-item-1">
+								<style>
+								#metro-item-1 {
+									background-image: url({% static 'images/metro_1.jpg' %});
+								}
+								</style>
+								<div class="metro-overlay"></div>
+								<p>Трековые<br>светильники</p>
+							</a>
+							<a href="{% url 'core:category_page' category_url='svetodiodnye_prozhektory/lineynye_prozhektory_wall_washer' %}"class="metro-menu__item" id="metro-item-2">
+								<style>
+								#metro-item-2 {
+									background-image: url({% static 'images/metro_2.jpg' %});
+								}
+								</style>
+								<div class="metro-overlay"></div>
+								<p>Линейные<br>светильники</p>
+							</a>
+							<a href="{% url 'core:category_page' category_url='promyshlennoe_i_skladskoe_osveshchenie' %}" class="metro-menu__item" id="metro-item-3">
+								<style>
+								#metro-item-3 {
+									background-image: url({% static 'images/metro_3.jpg' %});
+								}
+								</style>
+								<div class="metro-overlay"></div>
+								<p>Складские<br>светильники</p>
+							</a>
+							<div class="clearfix"></div>
+						</div>
+						<div class="metro-menu__row">
+							<a href="{% url 'core:category_page' category_url='svetodiodnye_svetilniki/svetilniki_vstraivaemye' %}" class="metro-menu__item" id="metro-item-4">
+								<style>
+								#metro-item-4 {
+									background-image: url({% static 'images/metro_4.jpg' %});
+								}
+								</style>
+								<div class="metro-overlay"></div>
+								<p>Встраиваемые светильники</p>
+							</a>
+							<a href="{% url 'core:category_page' category_url='svetodiodnye_svetilniki/svetilniki_mebelnye_vitrinnye' %}" class="metro-menu__item" id="metro-item-5">
+								<style>
+								#metro-item-5 {
+									background-image: url({% static 'images/metro_5.jpg' %});
+								}
+								</style>
+								<div class="metro-overlay"></div>
+								<p>Витринные<br>светильники</p>
+							</a>
+							<a href="{% url 'core:category_page' category_url='alyuminievyy_profil' %}" class="metro-menu__item" id="metro-item-6">
+								<style>
+								#metro-item-6 {
+									background-image: url({% static 'images/metro_6.jpg' %});
+								}
+								</style>
+								<div class="metro-overlay"></div>
+								<p>Алюминиевый<br>профиль</p>
+							</a>
+							<div class="clearfix"></div>
+						</div>
+						<div class="metro-menu__row">
+							<a href="{% url 'core:category_page' category_url='svetodiodnye_svetilniki/svetilniki_nakladnye' %}" class="metro-menu__item" id="metro-item-7">
+								<style>
+								#metro-item-7 {
+									background-image: url({% static 'images/metro_7.jpg' %});
+								}
+								</style>
+								<div class="metro-overlay"></div>
+								<p>Накладные<br>светильники</p>
+							</a>
+							<a href="{% url 'core:category_page' category_url='svetodiodnye_lenty' %}" class="metro-menu__item" id="metro-item-8">
+								<style>
+								#metro-item-8 {
+									background-image: url({% static 'images/metro_8.jpg' %});
+								}
+								</style>
+								<div class="metro-overlay"></div>
+								<p>Светодиодные ленты</p>
+							</a>
+							<a href="{% url 'core:category_page' category_url='bloki_pitaniya_i_drayvery' %}" class="metro-menu__item" id="metro-item-9">
+								<style>
+								#metro-item-9 {
+									background-image: url({% static 'images/metro_9.jpg' %});
+								}
+								</style>
+								<div class="metro-overlay"></div>
+								<p>Блоки питания</p>
+							</a>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<a class="slider-button" id="slider-button-2" href="{% url 'core:optom' %}">УЗНАТЬ БОЛЬШЕ</a>
+					<img class="slider-image" src="{% static 'images/slide_2.jpg' %}">
+				</div>
+				<div class="item">
+					<a class="slider-button-neon" id="slider-button-3" href="{% url 'core:category_page' category_url='svetodiodnye_svetilniki/trekovye/svetilniki_chetirehfaznie_4l' %}">ПОДРОБНЕЕ</a>
+					<img class="slider-image" src="{% static 'images/slide_3.jpg' %}">
+          		</div>
+				<div class="item">
+					<a class="slider-button-neon" id="slider-button-4" href="{% url 'core:category_page' category_url='svetodiodnye_lenty/svetodiodniy-neon-220v' %}">ПОДРОБНЕЕ</a>
+					<img class="slider-image" src="{% static 'images/slide_4.jpg' %}">
+          		</div>
+				<div class="item">
+					<a class="slider-button-neon" id="slider-button-5" href="{% url 'core:product_page' slug='mbd-101-krug-22w-5000k-220v-170150mm' %}">ПОДРОБНЕЕ</a>
+					<img class="slider-image" src="{% static 'images/slide_5.jpg' %}">
+          		</div>
+			</div>
+
+			<div class="slider-navigation">
+				<a id="arrow-left" class="slider-arrow slider-left"></a>
+				<a id="arrow-right" class="slider-arrow slider-right"></a>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block content %}
+	<div class="content-wrapper">
+
+		<div class="showcase-new">
+			<h2>Новинки</h2>
+			<div class="products-gallery">
+				{% for item in new_items %}
+				<div class="product-card__wrapper">
+					<div class="product-card" onclick="location.href='{% url 'core:product_page' slug=item.slug %}';">
+						<div class="product-card__front">
+							<div class="view_details"><span>ПОДРОБНЕЕ</span></div>
+							<img src="{{ item.thumbnail.url }}" alt="Изображение"/>
+							<div class="image_overlay"></div>
+							<div class="stats-container">
+								<div class="product-card__name">
+								{{ item.name }}
+								</div>
+								<div class="product-card__price">
+								{{ item.price }} P.
+								</div>
+								{% if item.is_in_stock %}
+								<div class="product-card__availability">
+								В наличии
+								</div>
+								{% else %}
+								<div class="product-card__availability-not">
+								Нет в наличии
+								</div>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+
+		<div class="showcase-bestseller">
+			<h2>Хиты продаж</h2>
+
+			<div class="products-gallery">
+				{% for item in showcase_items %}
+				<div class="product-card__wrapper">
+					<div class="product-card" onclick="location.href='{% url 'core:product_page' slug=item.slug %}';">
+						<div class="product-card__front">
+							<div class="view_details"><span>ПОДРОБНЕЕ</span></div>
+							<img src="{{ item.thumbnail.url }}" alt="Изображение"/>
+							<div class="image_overlay"></div>
+							<div class="stats-container">
+								<div class="product-card__name">
+								{{ item.name }}
+								</div>
+								<div class="product-card__price">
+								{{ item.price }} P.
+								</div>
+								{% if item.is_in_stock %}
+								<div class="product-card__availability">
+								В наличии
+								</div>
+								{% else %}
+								<div class="product-card__availability-not">
+								Нет в наличии
+								</div>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+
+		</div>
+	</div>
+{% endblock %}
+
+
+{% block javascript %}
+	{{ block.super }}
+	<script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+	<script src="{% static 'js/owl.carousel.min.js'%}"></script>
+	<script src="{% static 'js/scripts.js'%}"></script>
+{% endblock %}
+

@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load staticfiles i18n %}
+
+{% block css %}
+	{{ block.super }}
+{% endblock %}
+
+{% block content %}
+	{% verbatim %}
+	<div class="content-wrapper-generic">
+		<div class="content-area">
+			<div class="order-title">
+			ОФОРМЛЕНИЕ ЗАКАЗА
+			</div>
+		</div>
+		<div class="order" id="order-form">
+			<div class="order__header">
+				Данные получателя
+			</div>
+			<div class="order__content">
+
+				<div class="field">
+					<div class="field__title">
+						<span class="red">*</span>
+						Ваше имя
+					</div>
+					<div class="field__input-box">
+						<input class="field__input" v-model="order.name"
+							:class="{ field__input_invalid : nameProceeded && !nameIsValid, field__input_valid : nameProceeded && nameIsValid }"
+							@blur="processName"
+						>
+					</div>
+				</div>
+
+				<div class="field">
+					<div class="field__title">
+						<span class="red">*</span>
+						Телефон
+					</div>
+					<div class="field__input-box">
+						<masked-input class="field__input" type="tel"
+							v-model="order.phone"
+							@blur="processPhone"
+							:class="{ field__input_invalid : phoneProceeded && !phoneIsValid, field__input_valid : phoneProceeded && phoneIsValid }"
+							:mask="['+', '7',' ','(', /\d/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]"
+						/>
+					</div>
+				</div>
+
+				<div class="field">
+					<div class="field__title">
+						<span class="red">*</span>
+						Электронная почта
+					</div>
+					<div class="field__input-box">
+						<input class="field__input" v-model="order.email"
+							@blur="processEmail"
+							:class="{ field__input_invalid : emailProceeded && !emailIsValid, field__input_valid : emailProceeded && emailIsValid }"
+						>
+					</div>
+				</div>
+
+				<div class="field field_textarea">
+					<div class="field__title">
+						Адрес доставки
+					</div>
+					<textarea class="textarea" v-model="order.address">
+					</textarea>
+				</div>
+
+				<div class="field field_textarea">
+					<div class="field__title">
+						Примечания к заказу
+					</div>
+					<textarea class="textarea" v-model="order.order_text">
+					</textarea>
+				</div>
+
+			</div>
+			<div class="order__controls">
+				<div class="order__total" :class="{ order__total_ready : cartIsReady }">
+					Всего: <span v-if="cartIsReady">{{cartProxy.total_price}}</span> ₽
+				</div>
+				<button class="button button_flat button_green"
+					:disabled="!orderAllowed"
+					:class="{ button_disabled : !orderAllowed }"
+					@click="orderSubmit"
+				>
+					ЗАВЕРШИТЬ ОФОРМЛЕНИЕ
+				</button>
+			</div>
+			<div class="order__info">
+				<span class="red">*</span>
+				<span>Для оформления заказа общая сумма должна составлять не менее 5000 ₽</span>
+				<p>Оформленный Вами заказ не является договором оферты и носит информационный характер.<br>
+				Для окончательного завершения заказа дождитесь связи с сотрудником.</p>
+			</div>
+		</div>
+	</div>
+	{% endverbatim %}
+{% endblock content %}
+
+{% block javascript %}
+	{{ block.super }}
+	<script src="{% static 'js/orderPage.js'%}"></script>
+{% endblock %}

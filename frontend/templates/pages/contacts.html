@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load staticfiles i18n %}
+
+{% block css %}
+	{{ block.super }}
+{% endblock %}
+
+{% block content %}
+	<div class="content-wrapper-generic">
+		<div class="page-title">
+		КОНТАКТЫ
+		</div>
+		<div class="contacts-page__content">
+			<div class="contacts-page__content-left">
+				<div class="contacts-page__row">
+					<div class="row-title">
+					ТЕЛЕФОНЫ
+					</div>
+					<div class="row-content">
+						<p>+7 495 642 35 07</p>
+						<p>+7 916 053 17 50</p>
+					</div>
+				</div>
+				<div class="contacts-page__row">
+					<div class="row-title">
+					ЭЛЕКТРОННАЯ ПОЧТА
+					</div>
+					<div class="row-content">
+						<a href="mailto:sales@torg-osvet.ru">sales@torg-osvet.ru</a>
+					</div>
+				</div>
+				<div class="contacts-page__row">
+					<div class="row-title">
+					ПУНКТ САМОВЫВОЗА
+					</div>
+					<div class="row-content">
+					Пятницкое шоссе, д.18<br>  "ТК Митинский Радиорынок"
+					</div>
+				</div>
+				<div class="contacts-page__row">
+					<div class="row-title">
+					ДЛЯ ЮРИДИЧЕСКИХ ЛИЦ И ИП
+					</div>
+					<div class="row-content">
+						<a href="{% static 'REQUISITES.docx' %}">реквизиты</a>
+					</div>
+				</div>
+			</div>
+			<div class="contacts-page__content-right">
+				<div id="contacts-map" class="contacts-map">
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+{% endblock content %}
+
+{% block javascript %}
+	{{ block.super }}
+	<script src="{% static 'js/infoPage.js'%}"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<script type="text/javascript">
+    ymaps.ready(init);
+    var myMap;
+
+    function init(){     
+        myMap = new ymaps.Map("contacts-map", {
+            center: [55.844417, 37.3837183],
+            zoom: 16,
+        });
+
+        myPlacemark = new ymaps.Placemark([55.844417, 37.3837183], { 
+            hintContent: 'Москва!', 
+            balloonContent: 'Столица России',
+            preset: 'islands#greenDotIconWithCaption', 
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+    }
+	</script>
+{% endblock %}

@@ -1,0 +1,58 @@
+@import "variables/colors";
+@import "ionic/ionicons-variables";
+
+.flexbox-gallery {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap; 
+	background: $white;
+}
+
+.flexbox-gallery__item {
+	overflow: hidden;
+	position: relative;
+	background: $mint;
+	width: 235px !important;
+	height: 235px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	img {
+		position: absolute;
+		z-index: 400;
+		height: 400px;
+		top: -66.5px;
+		left: -66.5px;
+	}
+}
+
+.fx-box__item-overlay {
+	position: absolute;
+	height: 235px;
+	width: 235px;
+	top: 0px;
+	left: 0px;
+	background: rgba(0,0,0,0.6);
+	z-index: 501;
+	transition: 0.2s;
+	&:hover {
+		background: $acid-green;
+	}
+}
+
+.fx-box-item__text-content {
+	font-family: MuseoSansBlack;
+	font-size: 22px;
+	text-align: center;
+	position: relative;
+	z-index: 500;
+	height: 100%;
+	width: 100%;
+	transition: 0.2s;
+	padding: 100px 20px 20px 20px;
+	color: $white;
+	background: rgba(0,0,0,0.6);
+	&:hover {
+		background: rgba(0,100,60,0.7);
+	}
+}

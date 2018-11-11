@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles i18n %}
+
+{% block css %}
+  {{ block.super }}
+{% endblock %}
+
+{% block content %}
+  <div class="content-wrapper-generic">
+
+    <div class="page-title">
+      Все категории
+    </div>
+    <div class="flexbox-gallery">
+      {% for category in categories_qs %}
+      <div class="flexbox-gallery__item">
+          <a href="{% url 'core:category_page' category_url=category.url %}">
+            <img src="{{ category.thumbnail.url }}">
+            <div class="fx-box-item__text-content">
+              <p>{{ category.name }}</p>
+            </div>
+          </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block javascript %}
+  {{ block.super }}
+  <script src="{% static 'js/infoPage.js'%}"></script>
+{% endblock %}

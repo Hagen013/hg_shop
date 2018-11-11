@@ -1,0 +1,57 @@
+.pagination {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	position: relative;
+	margin: 0 auto;
+	width: 980px;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+a.pagination__page {
+	background: $white;
+	display: table-cell;
+	font-family: MuseoSansBlack;
+	padding: 9px 10px;
+	font-size: 14px;
+	width: 70px !important;
+	height: 34px !important;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid #d2d2d2;
+	margin-left: -3px;
+	border-radius: 0;
+	border-collapse: collapse;
+	transition: 0.3s;
+}
+
+.hoverable {
+	&:hover {
+		background: #E6E6E6;
+	}
+}
+
+.inactive {
+	color: #D6D6D6;
+}
+
+.page-prev {
+	&:after {
+		content: $ionicon-var-chevron-left;
+		font-family: 'Ionicons';
+	}
+}
+
+.page-next {
+	&:after {
+		content: $ionicon-var-chevron-right;
+		font-family: 'Ionicons';
+	}
+}
+
+.current {
+	cursor: default;
+	background: #d2d2d2 !important;
+}
+

@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load staticfiles i18n %}
+
+{% block css %}
+	{{ block.super }}
+{% endblock %}
+
+{% block content %}
+	<div class="content-wrapper-generic">
+
+    <div class="page-title">
+      ОПЛАТА И ДОСТАВКА
+    </div>
+
+    <div class="text-content">
+      <h2>КАК КУПИТЬ</h2>
+      <ol class="large">
+        <li>
+          <div class="list_item__label">
+          1
+          </div>
+          <p class="list-item__content">
+                  Выберите товары, представленные на сайте, поместите их в Корзину Заказов, 
+      либо сообщите о выбранных товарах менеджеру в телефонном режиме, 
+      либо отправьте список выбранных товаров по e-mail
+          </p>
+          <div class="clearfix"></div>
+        </li>
+
+        <li>
+          <div class="list_item__label">
+          2
+          </div>
+          <p class="list-item__content">
+По окончании выбора укажите Ваши контактные данные, заполнив соответствующую форму, 
+     либо сообщив их менеджеру, 
+     либо отправьте по e-mail  Вашу Карту Партнера (при безналичной форме оплаты)
+          </p>
+          <div class="clearfix"></div>
+        </li>
+
+        <li>
+          <div class="list_item__label">
+          3
+          </div>
+          <p class="list-item__content">
+Согласуйте с менеджером способ и форму оплаты и дождитесь подтверждение о резервировании выбранных товаров, 
+      либо дождитесь выставления счёта (при безналичной форме оплаты)
+          </p>
+          <div class="clearfix"></div>
+        </li>
+
+        <li>
+          <i class="list_item__label-success">
+          </i>
+          <p id="p-last" class="list-item__content">
+Оплатите и получите заказ
+          </p>
+          <div class="clearfix"></div>
+        </li>
+
+      </ol>
+
+      <h2>СПОСОБЫ ОПЛАТЫ<span class='star'>*</span></h2>
+      <ol class="small">
+        <li>
+          <div class="list_item__label-small">
+          1
+          </div>
+          <p class="list-item__content">
+Оплата наличными в пункте самовывоза, либо курьеру при получении<span class="star">**</span>
+          </p>
+          <div class="clearfix"></div>
+        </li>
+
+        <li>
+          <div class="list_item__label-small">
+          2
+          </div>
+          <p class="list-item__content">
+Электронной платеж (актуальный способ уточняйте у менеджера)
+          </p>
+          <div class="clearfix"></div>
+        </li>
+
+        <li>
+          <div class="list_item__label-small">
+          3
+          </div>
+          <p class="list-item__content">
+Безналичный расчёт (для ИП и юридических лиц)
+          </p>
+          <div class="clearfix"></div>
+        </li>
+      </ol>
+
+      <div class="additional-info"> 
+        <p>  <span class="star">*</span> Минимальная сумма заказа при наличном расчёте составляет 5 000 рублей.</p>
+  <p><span class="star">*</span> Минимальная сумма заказа при безналичном расчёте составляет 10 000 рублей.</p>
+<p><span class="star">**</span> Максимальная сумма заказа при наличном расчёте без предварительной оплаты - 20 000 рублей.
+    <br>(При заказе на сумму свыше 20 000 руб. требуется предварительная оплата)  </p>
+      </div>
+
+      <h2>ДОСТАВКА</h2>
+      <ol class="small">
+        <li>
+          <div class="list_item__label-small shifted">
+          1
+          </div>
+          <p class="list-item__content">
+Выдача в пункте самовывоза по адресу:<br>
+  Пятницкое шоссе, д.18 "ТК Митинский Радиорынок". 
+          </p>
+          <div class="clearfix"></div>
+        </li>
+
+        <li>
+          <div class="list_item__label-small shifted">
+          2
+          </div>
+          <p class="list-item__content">
+Курьерская доставка по г.Москва в срок 1-2 дня:<br>
+  стоимость от 500 руб / при сумме заказа от 30 000 руб - бесплатно<span class="star">*</span>
+          </p>
+          <div class="clearfix"></div>
+        </li>
+
+        <li>
+          <div class="list_item__label-small shifted">
+          3
+          </div>
+          <p class="list-item__content">
+Курьерская доставка по Московской области в срок 2-5 дней:<br>
+  стоимость от 1000 руб / при сумме заказа от 50 000 руб - бесплатно<span class="star">*</span>
+          </p>
+          <div class="clearfix"></div>
+        </li>
+
+        <li>
+          <div class="list_item__label-small shifted">
+          4
+          </div>
+          <p class="list-item__content">
+Доставка во все регионы РФ посредством транспортных компаний и почтовых служб: 
+<br>стоимость доставки оплачивает получатель в соответствии с тарифами транспортных компаний
+          </p>
+          <div class="clearfix"></div>
+        </li>
+
+      </ol>
+      <div class="additional-info">
+<p><span class="star">*</span> Бесплатная доставка гарантируется при указанных условиях, кроме случаев заказа "негабаритных" изделий <br>(т.к. алюминиевый профиль для LED лент длиной 2 - 2,5м).</p>
+<p>   В процессе выбора товаров и на любом этапе оформления заказа Вы можете задавать возникающие вопросы удобным для Вас способом связи.
+  До момента оплаты заказа Вы имеете возможность изменять и уточнять содержание заказа, форму оплаты и способы доставки.
+</p>
+
+      </div>
+      <h2>ДЛЯ ЮРИДИЧЕСКИХ ЛИЦ И ИНДИВИДУАЛЬНЫХ ПРЕДПРИНИМАТЕЛЕЙ</h2>
+      <div class="billing-info">
+        <a href="{% static 'REQUISITES.docx' %}">РЕКВИЗИТЫ</a><br>
+        <p>ВНИМАНИЕ! Мы работаем по упрощённой системе налогообложения (без НДС).<br>
+Основание: ст. 168 НК РФ часть 2 глава 21, ст. 346 НК РФ часть 2 глава 26.2."</p>
+      </div>
+
+
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block javascript %}
+  {{ block.super }}
+  <script src="{% static 'js/infoPage.js'%}"></script>
+{% endblock %}

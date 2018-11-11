@@ -1,0 +1,117 @@
+@import "variables/colors";
+@import "ionic/ionicons-variables";
+
+
+
+.text-content {
+	background: $white;
+	padding: 20px;
+	padding-bottom: 30px;
+	h2 {
+		padding: 10px 20px 5px 20px;
+		font-family: MuseoSansBlack;
+		font-weight: 900px;
+	}
+	a {
+		font-size: 18px;
+		transition: 0.2s;
+		color: $link-color;
+		&:hover {
+			color: $link-color-strong;
+		}
+	}
+}
+
+ol.large {
+	padding: 5px 80px 20px 40px;
+	margin-bottom:  10px;
+	li {
+		padding: 10px 10px 5px 0px;
+	}
+	p {
+		padding-top: 10px;
+		text-indent: 30px;
+		line-height: 1.5;
+	}
+}
+
+
+.list_item__label {
+	margin-top: 24px;
+	padding-top: 8px;
+	font-family: MuseoSansBlack;
+	text-align: center;
+	font-size: 20px;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background: $mint;
+	float: left;
+}
+
+.list-item__content {
+	padding-left: 20px;
+	float: left;
+	width: 760px;
+	&:last-child {
+		background: red;
+	}
+}
+
+#p-last {
+	padding-top: 14px !important;
+	text-indent: 10px;
+}
+
+.list_item__label-success {
+	padding-top: 10px;
+	padding-left: 8px;
+	width: 40px;
+	height: 40px;
+	font-size: 28px;
+	float: left;
+	&:after {
+		font-family: 'Ionicons';
+		color: $mint;
+		content: $ionicon-var-checkmark;
+	}
+}
+
+span.star {
+	color: red;
+}
+
+.list_item__label-small {
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background: $mint;
+	float: left;
+}
+
+ol.small {
+	padding: 8px 80px 20px 40px;
+	li {
+		padding: 8px 0px 5px 0px;
+		height: 50px;
+	}
+	.shifted {
+		margin-top: 6px !important;
+	}
+}
+
+.additional-info {
+	padding: 0px 30px 20px 50px;
+	p {
+		padding: 5px 10px 5px 0px;
+		text-align: justify;
+	}
+}
+
+.billing-info {
+	line-height: 1.5;
+	padding: 10px 30px 20px 20px;
+}

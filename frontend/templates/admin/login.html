@@ -1,0 +1,23 @@
+{% load staticfiles i18n %}
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+        {% block css %}
+        {% endblock %}
+
+    </head>
+    <body>
+
+    <div id="app">
+        <login-form>
+        </logim-form>
+    </div>
+
+    </body>
+
+    {% block javascript %}
+        <script src="{% static 'js/adminLogin.js'%}" type="text/javascript"></script>
+    {% endblock javascript %}
+
+</html>
+ 

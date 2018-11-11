@@ -1,0 +1,111 @@
+{% load mptt_tags %}
+
+<div class="site-header" id="header">
+	<div class="header-top">
+		<div class="content-area">
+
+	        <div id="site-logo">
+				<a href="{% url 'core:index_page' %}">ТОРГ<span class="mint">ОСВЕТ</span></a>
+	        </div>
+
+	        <div id="nav-top">
+		        <li class="nav-top__item">
+		          <a href="{% url 'core:index_page' %}">Главная</a>
+		        </li>
+		        <li class="nav-top__item">
+		          <a href="{% url 'core:about' %}">О нас</a>
+		        </li>
+		        <li class="nav-top__item">
+		          <a href="{% url 'core:optom' %}">Оптом</a>
+		        </li>
+		        <li class="nav-top__item">
+		          <a href="{% url 'core:contacts' %}">Контакты</a>
+		        </li>
+			    <div id="phone-num">
+					<a href="#" class="phone-num-link">
+					            +7 495 642 35 07<br>+7 916 053 17 50
+
+					</a>
+			    </div>
+	        </div>
+
+		</div>
+	</div>
+
+	<div class="header-bottom" id="header-bottom">
+		<div class="content-area">
+					<div id="catalog-top"
+						@mouseenter="showOverlay"
+						@mouseleave="hideOverlay"
+					>
+	          <a class="catalog-label" href="{% url 'core:catalog_root' %}">
+	            КАТАЛОГ ТОВАРОВ
+	          </a>
+
+			    <nav id="top-categories" class="nav">
+			      <ul id="main-categories" class="aim-menu-container">
+			        {% recursetree nodes %}
+							<li id="menu-item-{{ node.id }}" class="dropdown_menu__item"
+								@mouseenter="rowEnter"
+								@mouseleave="rowExit"
+							>
+								<a href="{% url 'core:category_page' category_url=node.url %}">
+								{{ node.name }}
+			          {% if not node.is_leaf_node %}
+			          <i class="chevron-right"></i>
+			          {% endif %}
+			          </a>
+			        {% if not node.is_leaf_node %}
+							<ul id="category-{{ node.slug }}" class="aim-menu-container">
+			          {{ children }}
+			        </ul>
+			        {% endif %}
+			        </li>
+			        {% endrecursetree %}
+			      </ul>
+			    </nav>
+
+	      </div>
+
+		    <div id="search-box">
+		      <form id="search-form" action="/search/" method="get">
+		        <div class="search-box">
+						<button
+						 formaction="/search"
+						 id="search-button">
+						</button>
+						<input
+							type="text"
+							name="q"
+							id="search-input"
+							placeholder="ПОИСК"
+							v-model="searchQuery"
+						>
+		        </div>
+		      </form>
+		    </div>
+
+		    <a id="cart-info" href="{% url 'cart:default' %}">
+				{% verbatim %}
+    				<span class="cart-info__icon"></span>
+	          <span class="header-button__label">
+	          КОРЗИНА
+						</span>
+						<span class="cart-info__caption"
+							:class="{ cartInfo__caption_ready : cartIsReady }" 
+						>
+							{{cartCaption}}
+						</span>
+						<span id="cart-info__quantity"
+							class="cart-info__quantity"
+							:class="{ cartInfo__quantity_active: cartNotEmpty }"
+						>
+							{{cartCount}}
+	          </span>
+				</a>
+				{% endverbatim %}
+
+	  	</div>
+
+	</div>
+</div>

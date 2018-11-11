@@ -1,0 +1,69 @@
+@import "variables/colors";
+@import "ionic/ionicons-variables";
+
+
+.content-wrapper-generic {
+	padding-top: 48px;
+	margin: 0 auto;
+	width: 980px;
+}
+
+
+
+
+.contacts-page__content {
+	width: 100%;
+	position: relative;
+	background: $white;
+	height: 640px;
+}
+
+.contacts-page__content-left {
+	width: 370px;
+	float: left;
+	padding: 20px 0px 10px 20px;
+}
+
+.contacts-page__content-right {
+	width: 610px;
+	float: right;
+}
+
+.contacts-map {
+	width: 100%;
+	height: 500px;
+	padding: 10px;
+	background: $white;
+}
+
+.contacts-page__row {
+	height: 120px;
+	width: 100%;
+}
+
+.contacts-page__row .row-title {
+	font-size: 18px;
+	font-family: MuseoSansBlack;
+
+}
+
+.contacts-page__row .row-content {
+	padding-top: 10px;
+	font-weight: 100;
+	a {
+		font-size: 18px;
+		transition: 0.2s;
+		color: $link-color;
+		&:hover {
+			color: $link-color-strong;
+		}
+	}
+}
+
+.billing-info-contacts {
+	padding-top: 10px;
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+

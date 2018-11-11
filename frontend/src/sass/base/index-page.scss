@@ -1,0 +1,279 @@
+@import "variables/colors";
+@import "ionic/ionicons-variables";
+
+#site-slider {
+  width: 980px;
+  z-index: 1000;
+  margin: auto;
+  margin-top: 58px;
+}
+
+#site-slider .item {
+    height: 380px;
+    width: 980px;
+    padding-left: 64px;
+    padding-top: 40px;
+    font-family: MuseoSansBlack;
+    font-weight: 900;
+}
+
+#green {
+  background: $dark;
+  color: $mate;
+}
+
+#red {
+  background: $mate;
+  color: $dark;
+}
+
+#blue {
+  background: $acid-green;
+  color: $dark;
+}
+
+#yellow {
+  background: $dark;
+  color: $mate;
+}
+
+
+.slider-container {
+  position: relative;
+  margin: 0 auto;
+  width: 980px;
+  &:hover {
+    .slider-arrow {
+      display: block;
+    }
+  }
+}
+
+.slider-arrow {
+  display: none;
+  transition: 0.3s;
+  clear: both;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  height: 380px;
+  width: 48px;
+  background: $smoky-invisible;
+  top: 0px;
+  z-index: 1000;
+  &:hover {
+    background: $smoky;
+  }
+}
+
+
+.slider-left {
+  &:before {
+    font-size: 36px;
+    position:absolute;
+    top: 165px;
+    left: 15px;
+    content: $ionicon-var-chevron-left;
+    speak: none;
+    color: white;
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Ionicons';
+  }
+}
+
+.slider-right {
+  right: 0px;
+  &:before {
+    top: 165px;
+    right: 15px;
+    font-size: 36px;
+    position:absolute;
+    content: $ionicon-var-chevron-right;
+    speak: none;
+    color: white;
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Ionicons';
+  }
+}
+
+.content-wrapper {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.showcase-new, .showcase-bestseller {
+  margin-top: 30px;
+  font-family: MuseoSansBlack;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 16px;
+  width: 100%;
+}
+
+.items-new {
+  height: 250px;
+  width: 100%;
+  background: $mate;
+}
+
+.showcase-bestseller__gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+.showcase-item__wrapper {
+  width: 245px;
+  height: 320px;
+  padding: 20px;
+  background: $dark;
+}
+
+.showcase-item {
+  width: 100%;
+  height: 100%;
+  background: $white;
+}
+
+.slider-image {
+  z-index: 0;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+#slide_2 {
+  padding: 0px !important;
+  background: $dark;
+  h2 {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 9999;
+    font-size:  28px;
+    color: $white;
+  }
+}
+
+.metro-menu__item {
+  cursor: pointer;
+  transition: 0.2s;
+  float: left;
+  background: black;
+  height: 110px;
+  width: 220px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  &:hover {
+    background: $acid-green;
+  }
+}
+
+.metro-menu {
+  padding-top: 15px;
+  position: absolute;
+  right: 40px;
+  width: 690px;
+}
+
+.metro-menu__item {
+  display: block;
+  position: relative;
+  padding: 5px 10px 20px 10px;
+  color: $white;
+  &:hover {
+    color: $dark;
+    .metro-overlay {
+      background: $mint;
+      opacity: 0.95;
+    }
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  p {
+    position: relative;
+    z-index: 9000;
+  }
+}
+
+.metro-overlay {
+  transition: 0.2s;
+
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: $dark;
+  opacity: 0.45;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-image {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 9000;
+}
+
+.slider-button {
+  transition: 0.2s;
+  padding-top: 15px;
+  font-family: MuseoSansBlack;
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  color: $dark;
+  background: $mint;
+  z-index: 9002;
+  position: absolute;
+  &:hover {
+    background: $dark;
+    color: $mint;
+  }
+}
+
+.slider-button-neon {
+  transition: 0.2s;
+  padding-top: 12px;
+  font-family: MuseoSansBlack;
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  color: $mint;
+  z-index: 9002;
+  border: 4px solid $mint;
+  position: absolute;
+  &:hover {
+    background: $mint;
+    color: $dark;
+  }
+}
+
+#slider-button-2 {
+  right: 50px;
+  bottom: 30px;
+}
+
+#slider-button-3 {
+  left: 40px;
+  bottom: 30px;
+}
+
+#slider-button-4 {
+  left: 30px;
+  bottom: 30px;
+}
+
+#slider-button-5 {
+  left: 40px;
+  bottom: 30px;
+}

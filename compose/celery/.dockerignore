@@ -1,0 +1,16 @@
+.*
+!.coveragerc
+!.env
+!.pylintrc
+
+
+hg_shop/media
+/hg_shop/media
+/hg_shop/media/
+
+/node_modules/
+/node_modules
+node_modules/
+
+.ipynb
+.pyc

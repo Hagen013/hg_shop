@@ -1,0 +1,138 @@
+{% load staticfiles i18n %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}Интернет-магазин светодиодного освещения по низким ценам{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="http://torgosvet.ru/favicon.ico" type="image/x-icon">
+    {% block meta %}
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {% endblock %}
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+    {% block css %}
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    {% endblock %}
+
+  </head>
+
+  <body>
+
+
+        <div class="page__content">
+            {% block header %}
+            {% include 'base/header.html' %}
+            {% endblock header %}
+
+            {% block site-slider %}
+            {% endblock %}
+
+
+            {% block content %}
+            {% endblock content %}
+
+            {% block info %}
+            <div class="info">
+                <div class="info__wrap">
+
+                    <a class="info__item" href="{% url 'core:info' %}">
+                        <div class="info__item-icon info__item-icon_delivery">
+                        </div>
+                        <div class="info__item-text">
+                            ДОСТАВКА<br>ПО ВСЕЙ РОССИИ<br>
+                            ИЛИ САМОВЫВОЗ
+                        </div>
+                    </a>
+
+                    <a class="info__item" href="mailto:sales@torg-osvet.ru">
+                        <div class="info__item-icon info__item-icon_help">
+                        </div>
+                        <div class="info__item-text">
+                            ДОКУМЕНТАЛЬНАЯ<br>
+                            И ТЕХНИЧЕСКАЯ<br>
+                            ПОДДЕРЖКА
+                        </div>
+                    </a>
+
+                    <a class="info__item" href="{% url 'core:optom' %}">
+                        <div class="info__item-icon info__item-icon_sale">
+                        </div>
+                        <div class="info__item-text">
+                            СКИДКИ ДО 18%<br>
+                            ПРИ ПОКУПКЕ<br>
+                            ОПТОМ
+                        </div>
+                    </a>
+                
+                </div>
+            </div>
+            {% endblock info %}
+
+        </div>
+        <div class="clearfix">
+        </div>
+
+        <div class="page__footer">
+            {% include 'base/footer.html' %}
+            {% block modal %}
+            <div id="overlays">
+                <transition name="fade-fast">
+                    <div class="page-overlay"
+                        v-if="pageOverlayIsActive"
+                        :class="{ pageOverlay_active : pageOverlayIsActive }"
+                    >
+                    </div>
+                </transition>
+            </div>
+            {% endblock modal %}
+        </div>
+
+    <div class="modal-controller" id="modal-controller">
+        {% block modals %}
+        {% endblock modals %}
+    </div>
+
+
+
+    {% block javascript %}
+        <script src="{% static 'js/common.js'%}" type="text/javascript"></script>
+      <!-- Yandex.Metrika counter -->
+      <script type="text/javascript">
+          (function (d, w, c) {
+              (w[c] = w[c] || []).push(function() {
+                  try {
+                      w.yaCounter43929739 = new Ya.Metrika({
+                          id:43929739,
+                          clickmap:true,
+                          trackLinks:true,
+                          accurateTrackBounce:true,
+                          webvisor:true
+                      });
+                  } catch(e) { }
+              });
+
+              var n = d.getElementsByTagName("script")[0],
+                  s = d.createElement("script"),
+                  f = function () { n.parentNode.insertBefore(s, n); };
+              s.type = "text/javascript";
+              s.async = true;
+              s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+              if (w.opera == "[object Opera]") {
+                  d.addEventListener("DOMContentLoaded", f, false);
+              } else { f(); }
+          })(document, window, "yandex_metrika_callbacks");
+      </script>
+      <noscript><div><img src="https://mc.yandex.ru/watch/43929739" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+      <!-- /Yandex.Metrika counter -->
+    {% endblock javascript %}
+  </body>
+</html>
+ 

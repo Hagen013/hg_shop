@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "MuseoSansCyrl-100Italic";
+    src: url("/static/fonts/MuseoSansLightItalic/MuseoSansLightItalic.eot");
+    src: url("/static/fonts/MuseoSansLightItalic/MuseoSansLightItalic.eot?#iefix") format("embedded-opentype"),
+         url("/static/fonts/MuseoSansLightItalic/MuseoSansLightItalic.woff2") format("woff2"),
+         url("/static/fonts/MuseoSansLightItalic/MuseoSansLightItalic.woff") format("woff"),
+         url("/static/fonts/MuseoSansLightItalic/MuseoSansLightItalic.ttf") format("ttf"),
+         url("/static/fonts/MuseoSansLightItalic/MuseoSansLightItalic.svg#MuseoSansCyrl-100Italic") format("svg");
+    font-style: italic;
+    font-weight: 300;
+}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Ошибка сервера{% endblock %}
+
+{% block header %}
+{% endblock header %}
+
+
+
+{% block content %}
+<style>
+	.main-error-wrapper {
+		padding-top: 80px;
+		padding-bottom: 140px;
+	}
+	.error-content {
+		width: 980px;
+		margin: 0 auto;
+		padding: 30px 30px 100px 30px;
+		background: white;
+		color: black;
+	}
+	p {
+		padding-top: 20px;
+	}
+</style>
+<div class="main-error-wrapper">
+	<div class="error-content">
+
+	<h1>Ой! 500</h1>
+
+	<h3>Что-то пошло не так</h3>
+
+	<p>Попробуйте обновить страницу через несколько минут. Мы уже обрабатываем ошибку автоматическим, однако если она продолжает возникать просим обратиться по телефону.</p>
+	</div>
+</div>
+{% endblock content %}
+
+

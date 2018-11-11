@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load staticfiles i18n %}
+
+{% block css %}
+	{{ block.super }}
+{% endblock %}
+
+{% block content %}
+	<div class="content-wrapper-generic" id="cart">
+
+		<div class="cart-title">ВАША КОРЗИНА
+		</div>
+		{% if cart.items|length > 0 %}
+		<div class="cart-menu__wrapper">
+			{% verbatim %}
+			<div class="cart-menu">
+				<div class="cart-menu__total" v-if="cartIsReady">
+					<span class="cart-menu__total-title">Итого:</span>
+					<span class="cart-menu__currency"> р.</span>
+					<span class="cart-menu__total-value" id="total-price">{{ cart.total_price }}</span>
+				<div class="clearfix"></div>
+				</div>
+				<div class="cart-menu__count" v-if="cartIsReady">
+					<span class="cart-menu__count-title">Товаров:</span>
+					<span class="cart-menu__count-value" id="total-count">{{ cart.count }}</span>
+				</div>
+				{% endverbatim %}
+				<div class="clearfix"></div>
+				<button
+					@click="orderRedirect"
+					class="cart-menu__order-button button-flat"
+					:class="{ inputActive : orderAllowed }"
+					:disabled="!orderAllowed"
+				>
+					ОФОРМИТЬ ЗАКАЗ
+				</button>
+			</div>
+			<div class="cart-menu__order-info">
+			<span class="star">*</span><span id="cart-menu__message"> Для оформления заказа общая сумма должна превышать 5000 р.</span>
+			</div>
+			<div class="cart-menu__shipments-info">
+				<div class="column-title">
+				БЕСПЛАТНАЯ ДОСТАВКА<br>ПО МОСКВЕ
+				</div>
+				<div class="column-text">
+				При заказе свыше 20.000 р. мы предоставляем доставку по Москве беспланто. 
+				<p>Стоимость доставки при заказе на меньшую сумму - от 500р.</p>
+				<a href="{% url 'core:info' %}">ПОДРОБНЕЕ</a>
+				</div>
+			</div>
+		</div>
+		<transition name="fade-fast">
+			<cart-items v-if="cartIsReady">
+			</cart-items>
+		</transition>
+		{% else %}
+			<div class="cart-placeholder">КОРЗИНА ПУСТА</div>
+		{% endif %}
+
+	</div>
+{% endblock content %}
+
+{% block javascript %}
+	{{ block.super }}
+	<script src="{% static 'js/cartPage.js'%}"></script>
+{% endblock %}
