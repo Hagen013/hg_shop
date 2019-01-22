@@ -9,6 +9,8 @@ COPY compose/nginx/acme /tmp
 COPY compose/nginx/acme2 /tmp
 COPY compose/nginx/acme3 /tmp
 COPY compose/nginx/acme4 /tmp
+COPY compose/nginx/acme5 /tmp
+COPY compose/nginx/acme6 /tmp
 COPY compose/nginx/ssl /ssl
 
 VOLUME tmp/cache
