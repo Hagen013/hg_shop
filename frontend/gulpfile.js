@@ -108,7 +108,9 @@ gulp.task('prod_css', function() {
 	gulp.src('./src/css/owl.carousel.min.css')
 		.pipe(gulp.dest(paths.css));
 	gulp.src('./src/css/owl.theme.default.min.css')
-        .pipe(gulp.dest(paths.css));
+		.pipe(gulp.dest(paths.css));
+	gulp.src('./src/css/jquery.fancybox.min.css')
+		.pipe(gulp.dest(paths.css));
 });
 
 

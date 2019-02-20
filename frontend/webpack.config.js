@@ -98,6 +98,7 @@ module.exports.plugins = (module.exports.plugins || []).concat([
     { from: './plugins/jquery.elevateZoom-3.0.8.min.js', to: "./jquery.elevateZoom-3.0.8.min.js" },
     { from: './plugins/jQuery.verticalCarousel.js', to: "./jQuery.verticalCarousel.js" },
     { from: './plugins/owl.carousel.min.js', to: "./owl.carousel.min.js" },
+    { from: './plugins/jquery.fancybox.min.js', to: "./jquery.fancybox.min.js" },
     { from: './assets/', to: "./assets/" },
   ]),
 

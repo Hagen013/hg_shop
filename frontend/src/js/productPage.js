@@ -34,6 +34,80 @@ $(document).ready(function() {
     $("#verticalCarousel").verticalCarousel({
         currentItem: 1,
         showItems: 4,
-    });
+	});
+	
 
+	$('.advantages-tab').on('click', event => {
+		const clickedElement = $(event.target);
+		let data = $(clickedElement).attr('data');
+		if (data === undefined) {
+			data = $(clickedElement).parent().attr('data');
+		}
+		$('.advantages-tab').each(function(index) {
+			let tabData = $(this).attr('data');
+			if (tabData === data) {
+				$(this).addClass("active");
+			} else {
+				$(this).removeClass("active");
+			}
+		});
+		$('.advantages-item').each(function(index) {
+			let itemData = $(this).attr('data');
+			if (itemData === data) {
+				$(this).addClass("advantages-item_active");
+			} else {
+				$(this).removeClass("advantages-item_active");
+			}
+		});
+	});
+
+	$('[data-fancybox="images"]').fancybox({
+		loop: true,
+		keyboard: true,
+		thumbs : {
+			autoStart : true
+		}
+	});
+
+	$('#slider-prev').click(function() {
+		let activeIndex = 0;
+		let quantity = $(".led-stone__item").length;
+		$(".led-stone__item").each(function(index) {
+			if ($(this).hasClass('active')) {
+				activeIndex = index;
+			}
+			$(this).removeClass("active");
+		})
+		activeIndex = activeIndex - 1;
+		if (activeIndex === -1) {
+			activeIndex = quantity - 1;
+		}
+		$(".led-stone__item").each(function(index) {
+			if (index === activeIndex) {
+				$(this).addClass('active');
+			}
+		})
+	})
+
+	$('#slider-next').click(function() {
+		let activeIndex = 0;
+		let quantity = $(".led-stone__item").length;
+		$(".led-stone__item").each(function(index) {
+			if ($(this).hasClass('active')) {
+				activeIndex = index;
+			}
+			$(this).removeClass("active");
+		})
+		activeIndex = activeIndex + 1;
+		if (activeIndex === quantity) {
+			activeIndex = 0;
+		}
+		$(".led-stone__item").each(function(index) {
+			if (index === activeIndex) {
+				$(this).addClass('active');
+			}
+		})
+	})
+  
 });
+

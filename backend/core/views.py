@@ -122,6 +122,11 @@ class ProductPageView(TemplateView):
     """
     template_name = 'pages/product_page.html'
 
+    def get_template_names(self):
+        if 'bruschatka' in self.item.category.url:
+            return 'pages/led-stone.html'
+        return [self.template_name]
+
     def get_user_status(self, *args, **kwargs):
         user = self.request.user
         return user.is_staff
@@ -130,6 +135,7 @@ class ProductPageView(TemplateView):
         context = super(ProductPageView, self).get_context_data(**kwargs)
         slug = kwargs['slug']
         item = get_object_or_404(ProductPage, slug=slug)
+        self.item = item
         if item.category is not None:
             breadcrumbs = item.category.get_ancestors(include_self=True)
         else:
