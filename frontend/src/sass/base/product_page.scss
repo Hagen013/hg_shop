@@ -445,6 +445,7 @@ span.name {
 	position: absolute;
 	top: 0px;
 	right: 0px;
+	height: 480px;
 	width: 100px;
 	overflow: hidden;
 	li {
@@ -457,7 +458,7 @@ span.name {
 	}
 }
 
-.vc_goUp, .vc_goDown, {
+.vc_goUp, .vc_goDown {
 	border-style: 2px solid $input-border;
 	cursor: pointer;
 	width: 100px;
@@ -489,3 +490,6 @@ span.name {
 	}
 }
 
+.vc_container {
+	overflow: hidden;
+}
