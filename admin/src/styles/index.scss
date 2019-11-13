@@ -1,0 +1,169 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+@import './table.scss';
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
+
+
+$accent: #f6de32;
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: 'IBM Plex Sans', sans-serif;
+  min-width: 1350px;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0px;
+}
+
+ol {
+  padding: 0px;
+  list-style-type: decimal;
+}
+
+#app{
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+div:focus{
+  outline: none;
+ }
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+//main-container全局样式
+.app-main{
+  min-height: 100%
+}
+
+.app-container {
+  position: relative;
+  padding: 20px;
+}
+
+
+
+.pagination {
+  display: flex;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+}
+.pagination__delimeter {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+.pagination__pagezise-label {
+  margin-right: 24px;
+}
+.gallery__controls {
+  display: flex;
+  justify-content: space-between;
+}
+.pagination__info {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+}
+.pagination__buttons {
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+}
+.pagination__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+}
+.pagination__button_disabled {
+  cursor: default;
+  color: rgba(0,0,0,.32);
+}
+.pagination__button_next {
+  margin-left: 8px;
+}
+.pagination__button_prev {
+
+}
+
+#nprogress .bar {
+  background: $accent !important;
+}
+
+
+.view-placeholder {
+  width: 100%;
+  height: 90vh;
+  padding: 20px;
+}
+.view-placeholder-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border: 2px dotted grey;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0) 49.9%, grey 49.9%, grey 60%, rgba(0, 0, 0, 0) 60% ), linear-gradient(45deg, green 10%, rgba(0, 0, 0, 0) 10% );
+  background-size: 0.5em 0.5em;
+  opacity: 0.3;
+}
