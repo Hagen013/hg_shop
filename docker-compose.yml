@@ -63,7 +63,7 @@ services:
       - redis
 
   nginx:
-    image: hagen013/hg_shop_nginx
+    image: hagen013/hg_shop_nginx2
     restart: unless-stopped
     build:
       context: .
