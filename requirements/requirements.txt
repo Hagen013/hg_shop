@@ -55,7 +55,7 @@ kombu==4.0.2
 flower==0.9.1
 
 # Django REST framework
-djangorestframework==3.5.4
+djangorestframework==3.9.1
 markdown==2.6.8
 
 
