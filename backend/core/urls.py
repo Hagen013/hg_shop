@@ -8,6 +8,7 @@ from rest_framework import routers
 
 from .views import IndexPageView, CategoryPageView, ProductPageView, CatalogRootView, ProductPageViewSet
 
+app_name = 'core'
 
 router = routers.DefaultRouter()
 router.register(r'products', ProductPageViewSet)

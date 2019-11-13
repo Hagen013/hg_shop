@@ -1,8 +1,8 @@
 
-let baseURL = 'https://presidentwatches.ru/api/v0'
+let baseURL = 'https://torgosvet/api/'
 
 if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://localhost:8000/api/v0'
+  baseURL = 'http://localhost:8000/api/'
 }
 
 export default baseURL

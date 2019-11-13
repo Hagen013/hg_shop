@@ -2,6 +2,7 @@ from django.conf.urls import url, include
 
 from .views import CartDetailView, Remove, Add, Update, CartInfo
 
+app_name = 'cart'
 
 urlpatterns = [
     url(r'^$', CartDetailView.as_view(), name='default'),

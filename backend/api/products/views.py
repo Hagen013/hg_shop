@@ -3,18 +3,24 @@ from django.core.exceptions import ObjectDoesNotExist
 from rest_framework.views import APIView, Response
 from rest_framework import generics, pagination, status
 from rest_framework.exceptions import PermissionDenied
+from rest_framework.pagination import LimitOffsetPagination
+from rest_framework import permissions
 
 from core.models import ProductPage
 from core.serializers import ProductPageSerializer
 
+from api.views import ListViewMixin
 
-class ProductPageListAPIView(APIView):
+
+class ProductPageListAPIView(APIView, ListViewMixin):
 
     model = ProductPage
-    serializer = ProductPageSerializer
+    serializer_class = ProductPageSerializer
+    pagination_class = LimitOffsetPagination
+    permissions_class = permissions.IsAdminUser
 
     def get(self, request, *args, **kwargs):
-        return Response({})
+        return self.list(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
         return Response({})

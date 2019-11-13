@@ -91,6 +91,7 @@ class OrderItem(models.Model):
     product = models.ForeignKey(
         ProductPage,
         related_name='order_items',
+        on_delete=models.CASCADE
     )
 
     price = models.DecimalField(

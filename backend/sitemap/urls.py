@@ -6,6 +6,8 @@ from django.urls import reverse
 
 from core.models import ProductPage, CategoryPage
 
+app_name = 'sitemap'
+
 
 class StaticViewSitemap(Sitemap):
 
