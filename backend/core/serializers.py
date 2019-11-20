@@ -1,6 +1,8 @@
+from django.conf import settings
+
 from rest_framework import serializers
 
-from .models import ProductPage, CategoryPage
+from .models import ProductPage, CategoryPage, ProductPhoto
 
 
 class DynamicFieldsModelSerializer(serializers.ModelSerializer):
@@ -75,3 +77,40 @@ class CategoryPageSerializer(DynamicFieldsModelSerializer):
             "name",
             "url"
         )
+
+
+class ProductPhotoSerializer(serializers.ModelSerializer):
+
+    image = serializers.ImageField(use_url=True)
+    thumbnail = serializers.ImageField(use_url=True)
+
+    class Meta:
+        model = ProductPhoto
+        fields = (
+            'id',
+            'product',
+            'image',
+            'thumbnail',
+            'order',
+        )
+
+
+class ProductImageFileSerializer():
+
+    def __init__(self, product, image_file, storage, count):
+        filepath = '{MEDIA_ROOT}images/{dirname}/{name}'.format(
+            MEDIA_ROOT=settings.MEDIA_ROOT,
+            dirname=product.vendor_code,
+            name=image_file.name
+        )
+        filename = storage.save(filepath, image_file)
+        self._instance = ProductPhoto(
+            product=product,
+            image=filename.replace(settings.MEDIA_ROOT, ''),
+            order=count+1
+        )
+    
+    def save(self):
+        self._instance.save()
+        self._instance.image.close()
+        self._instance.thumbnail.close()

@@ -430,12 +430,18 @@ span.name {
 }
 
 .main-image__wrapper {
+	display: block;
+	position: relative;
+	height: 400px;
+	width: 400px;
+	overflow: hidden;
 	padding-top: 40px;
 	img {
-		width: 400px !important;
-		height: 400px !important;
+		height: 100%;
+		width: auto;
 	}
 }
+
 
 .active_image img {
 	border: 3px solid $acid-green !important;

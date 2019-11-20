@@ -16,3 +16,8 @@ class ProductPhoto(Image):
         on_delete=models.CASCADE,
         db_index=True,
     )
+
+    order = models.PositiveIntegerField(
+        default=0,
+        db_index=True
+    )

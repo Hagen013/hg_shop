@@ -43,9 +43,23 @@ export const constantRouterMap = [
     children: [
       {
         path: '',
-        name: 'products',
+        name: 'Products',
         component: () => import('@/views/products/index'),
         meta: { title: 'Товары', icon: 'dashboard' }
+      },
+      {
+        path: ':id',
+        name: 'Product',
+        hidden: true,
+        component: () => import('@/views/forms/product'),
+        meta: { title: 'Редактирование товара' }
+      },
+      {
+        path: 'create',
+        name: 'ProductCreation',
+        hidden: true,
+        component: () => import('@/views/forms/product'),
+        meta: { title: 'Создание товара' }
       }
     ]
   },
