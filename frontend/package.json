@@ -80,6 +80,6 @@
     "vue-template-compiler": "^2.2.1",
     "vue-text-mask": "^6.0.0",
     "webpack": "^2.6.1",
-    "webpack-dev-server": "^2.5.0"
+    "webpack-dev-server": "^3.1.11"
   }
 }
