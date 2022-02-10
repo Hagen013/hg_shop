@@ -30,7 +30,7 @@
     "gulp-uglify": "^3.0.0",
     "html5sortable": "^0.6.3",
     "natives": "^1.1.6",
-    "node-sass": "^4.10.0",
+    "node-sass": "^7.0.0",
     "run-sequence": "^2.2.1",
     "sass-loader": "^6.0.5",
     "sass-mq": "^3.3.2",
